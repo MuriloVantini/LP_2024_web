@@ -38,8 +38,7 @@
                 </thead>
                 <tbody>
                     @foreach ($locacoes as $locacao)
-                        <tr
-                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $locacao->id }}
@@ -57,7 +56,7 @@
                                 {{ $locacao->data_fim }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $locacao->valor_total }}
+                                R$ {{ $locacao->valor_total }}
                             </td>
                             <td class="px-6 py-4">
                                 <a class="hover:underline hover:text-white"

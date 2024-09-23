@@ -47,7 +47,7 @@
                                 {{ $pagamento->data_pagamento }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $pagamento->valor_pago }}
+                                R$ {{ $pagamento->valor_pago }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $pagamento->metodo_pagamento }}

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('devolucoes_veiculos', function (Blueprint $table) {
-            $table->id('id_devolucao');
+            $table->id();  // Corrigido para gerar uma coluna 'id'
             $table->foreignId('locacao_id')->constrained('locacoes')->onDelete('cascade');  // FK para tabela 'locacoes'
             $table->date('data_devolucao');
             $table->enum('status_veiculo', ['completo', 'danificado']);

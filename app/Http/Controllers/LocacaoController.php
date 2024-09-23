@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Locacao;
+use App\Models\Veiculo;
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class LocacaoController extends Controller
+{
+    public function index()
+    {
+        $locacoes = Locacao::with(['veiculo', 'user'])->get();
+        return view('locacoes.index', compact('locacoes'));
+    }
+
+    public function create()
+    {
+        $veiculos = Veiculo::where('disponibilidade', true)->get();
+        $users = User::all();
+        return view('locacoes.create', compact('veiculos', 'users'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'veiculo_id' => 'required|exists:veiculos,id',
+            'data_inicio' => 'required|date',
+            'data_fim' => 'required|date|after:data_inicio',
+            'valor_total' => 'required|numeric',
+        ]);
+
+        Locacao::create($request->all());
+        return redirect()->route('locacoes.index')->with('success', 'Locação criada com sucesso!');
+    }
+
+    public function show($id)
+    {
+        $locacao = Locacao::with(['veiculo', 'user'])->findOrFail($id);
+        return view('locacoes.show', compact('locacao'));
+    }
+
+    public function edit($id)
+    {
+        $locacao = Locacao::findOrFail($id);
+        $veiculos = Veiculo::where('disponibilidade', true)->get();
+        $users = User::all();
+        return view('locacoes.edit', compact('locacao', 'veiculos', 'users'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'veiculo_id' => 'required|exists:veiculos,id',
+            'data_inicio' => 'required|date',
+            'data_fim' => 'required|date|after:data_inicio',
+            'valor_total' => 'required|numeric',
+        ]);
+
+        $locacao = Locacao::findOrFail($id);
+        $locacao->update($request->all());
+
+        return redirect()->route('locacoes.index')->with('success', 'Locação atualizada com sucesso!');
+    }
+
+    public function destroy($id)
+    {
+        $locacao = Locacao::findOrFail($id);
+        $locacao->delete();
+
+        return redirect()->route('locacoes.index')->with('success', 'Locação removida com sucesso!');
+    }
+}

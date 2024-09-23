@@ -2,7 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\DevolucaoVeiculo;
+use App\Models\Locacao;
+use App\Models\PagamentoLocacao;
 use App\Models\User;
+use App\Models\Veiculo;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,9 +19,9 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Veiculo::factory(10)->create();
+        // Locacao::factory(10)->create();
+        // DevolucaoVeiculo::factory(10)->create();
+        // PagamentoLocacao::factory(10)->create();
     }
 }

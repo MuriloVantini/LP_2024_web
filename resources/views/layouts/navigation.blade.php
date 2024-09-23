@@ -16,6 +16,26 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('veiculos.index')" :active="request()->routeIs('veiculos.index')">
+                        {{ __('Veículos') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('locacoes.index')" :active="request()->routeIs('locacoes.index')">
+                        {{ __('Locações') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('pagamentos.index')" :active="request()->routeIs('pagamentos.index')">
+                        {{ __('Pagamentos') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('devolucoes.index')" :active="request()->routeIs('devolucoes.index')">
+                        {{ __('Devoluções') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

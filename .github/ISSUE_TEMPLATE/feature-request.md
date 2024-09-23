@@ -1,20 +1,22 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Feature request - CRUD
+about: Crie um feat:CRUD
 title: ''
 labels: enhancement
 assignees: ''
 
----
+Eu como usuário, devo possuir acesso a navegação através da navbar (exemplo) :
+- 1
+- 2
+- 3
+- 4
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+### Create: 
+- [ ] Checkbox 1
+- [ ] Checkbox 2
+### Read:
+- [ ] Checkbox 1
+### Update:
+- [ ] Checkbox 1
+### Delete:
+- [ ] Checkbox 1

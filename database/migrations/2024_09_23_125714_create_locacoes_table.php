@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('locacoes', function (Blueprint $table) {
-            $table->id('id_locacao');
+            $table->id('id');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');  // FK para tabela 'users'
-            $table->foreignId('veiculo_id')->constrained('veiculos')->onDelete('cascade');  // FK para tabela 'veiculos'
+            $table->unsignedBigInteger('veiculo_id');  // FK para tabela 'veiculos'
+            $table->foreign('veiculo_id')->references('id_veiculo')->on('veiculos')->onDelete('cascade');  // Referenciando 'id_veiculo'
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->decimal('valor_total', 10, 2);

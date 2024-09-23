@@ -15,14 +15,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
-    <nav>
-        <ul>
-            <li><a href="{{ route('veiculos.index') }}">Veículos</a></li>
-            <li><a href="{{ route('locacoes.index') }}">Locações</a></li>
-            <li><a href="{{ route('pagamentos.index') }}">Pagamentos</a></li>
-            <li><a href="{{ route('devolucoes.index') }}">Devoluções</a></li>
-        </ul>
-    </nav>
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         @include('layouts.navigation')
 

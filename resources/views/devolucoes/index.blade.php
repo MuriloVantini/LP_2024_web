@@ -4,7 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Lista de Devoluções') }}
         </h2>
-        <h3 class="font-semibold text-sm underline text-gray-800 dark:text-gray-400 leading-tight hover:text-white">
+        <h3 class="font-semibold text-sm underline text-gray-800 dark:text-gray-400 leading-tight dark:hover:text-white">
             <a href="{{ route('devolucoes.create') }}">Adicionar Devolução</a>
         </h3>
     </x-slot>
@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
                     @foreach ($devolucoes as $devolucao)
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-50">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $devolucao->id }}

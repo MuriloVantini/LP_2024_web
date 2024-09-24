@@ -13,6 +13,9 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Livewire Styles -->
+    @livewireStyles
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -29,8 +32,11 @@
 
         <!-- Page Content -->
         <main>
-            @yield('content')  <!-- Deve estar aqui -->
+            @yield('content')
         </main>
     </div>
+
+    <!-- Livewire Scripts -->
+    @livewireScripts
 </body>
 </html>

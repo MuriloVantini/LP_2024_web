@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PagamentoLocacao;
 use App\Models\Locacao;
+use DateTime;
 use Illuminate\Http\Request;
 
 class PagamentoLocacaoController extends Controller
@@ -22,6 +23,9 @@ class PagamentoLocacaoController extends Controller
 
     public function store(Request $request)
     {
+        $date = DateTime::createFromFormat('m/d/Y', $request->data_pagamento);
+        $dateConvertida =  $date->format('Y-m-d');
+        $request['data_pagamento'] = $dateConvertida;
         $request->validate([
             'locacao_id' => 'required|exists:locacoes,id',
             'data_pagamento' => 'required|date',

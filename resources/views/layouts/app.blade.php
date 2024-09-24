@@ -25,6 +25,9 @@
         }
     </script> --}}
 
+
+    <!-- Livewire Styles -->
+    @livewireStyles
 </head>
 
 <body class="font-sans antialiased">
@@ -46,6 +49,12 @@
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+            @yield('content')
+        </main>
+    </div>
+
+    <!-- Livewire Scripts -->
+    @livewireScripts
 </body>
 
 </html>

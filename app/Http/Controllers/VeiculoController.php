@@ -9,8 +9,7 @@ class VeiculoController extends Controller
 {
     public function index()
     {
-        $veiculos = Veiculo::all();
-        return view('veiculos.index', compact('veiculos'));
+        return view('veiculos.index');
     }
 
     public function create()

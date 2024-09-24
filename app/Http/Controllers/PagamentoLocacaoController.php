@@ -11,8 +11,7 @@ class PagamentoLocacaoController extends Controller
 {
     public function index()
     {
-        $pagamentos = PagamentoLocacao::with('locacao')->get();
-        return view('pagamentos.index', compact('pagamentos'));
+        return view('pagamentos.index');
     }
 
     public function create()

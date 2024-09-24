@@ -27,7 +27,8 @@
 
 
     <!-- Livewire Styles -->
-    @livewireStyles
+    @filamentStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-sans antialiased">
@@ -51,7 +52,8 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
     <!-- Livewire Scripts -->
-    @livewireScripts
+    @livewire('notifications')
+    @filamentScripts
 </body>
 
 </html>

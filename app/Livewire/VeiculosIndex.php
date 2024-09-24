@@ -4,11 +4,12 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Veiculo;
+use Filament\Notifications\Notification;
 
 class VeiculosIndex extends Component
 {
     public $veiculos;
-
+    protected $listerners = ['dataDeleted', 'dataSaved'];
     public function mount()
     {
         $this->veiculos = Veiculo::all();
@@ -20,8 +21,10 @@ class VeiculosIndex extends Component
 
         if ($veiculo) {
             $veiculo->delete();
+            $this->reset('veiculos');
             $this->veiculos = Veiculo::all();
-            session()->flash('message', 'Veículo excluído com sucesso.');
+            Notification::make()->title('Veículo excluído com sucesso')->success()->send();
+            return redirect()->route('veiculos.index');
         }
     }
 

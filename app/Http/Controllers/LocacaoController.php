@@ -12,8 +12,7 @@ class LocacaoController extends Controller
 {
     public function index()
     {
-        $locacoes = Locacao::with(['veiculo', 'user'])->get();
-        return view('locacoes.index', compact('locacoes'));
+        return view('locacoes.index');
     }
 
     public function create()

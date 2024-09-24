@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Locacao;
 use App\Models\Veiculo;
 use App\Models\User;
+use DateTime;
 use Illuminate\Http\Request;
 
 class LocacaoController extends Controller
@@ -24,7 +25,13 @@ class LocacaoController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $dateInicio = DateTime::createFromFormat('m/d/Y', $request->data_inicio);
+        $dateInicioConvertida =  $dateInicio->format('Y-m-d');
+        $dateFim = DateTime::createFromFormat('m/d/Y', $request->data_fim);
+        $dateFimConvertida =  $dateFim->format('Y-m-d');
+        $request['data_inicio'] = $dateInicioConvertida;
+        $request['data_fim'] = $dateFimConvertida;
+        $request->validate(rules: [
             'user_id' => 'required|exists:users,id',
             'veiculo_id' => 'required|exists:veiculos,id',
             'data_inicio' => 'required|date',

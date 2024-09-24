@@ -11,8 +11,7 @@ class DevolucaoVeiculoController extends Controller
 {
     public function index()
     {
-        $devolucoes = DevolucaoVeiculo::with('locacao')->get();
-        return view('devolucoes.index', compact('devolucoes'));
+        return view('devolucoes.index');
     }
 
     public function create()

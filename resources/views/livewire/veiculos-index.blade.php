@@ -23,7 +23,7 @@
                     <td class="px-6 py-4">
                         <a class="hover:underline hover:text-white" href="{{ route('veiculos.show', $veiculo->id) }}">Visualizar</a>
                         <a class="hover:underline hover:text-white" href="{{ route('veiculos.edit', $veiculo->id) }}">Editar</a>
-                        <button wire:click="deleteVeiculo({{ $veiculo->id }}).$refresh" class="hover:underline hover:text-red-600">Excluir</button>
+                        <button wire:click="deleteVeiculo({{ $veiculo->id }})" class="hover:underline hover:text-red-600">Excluir</button>
                     </td>
                 </tr>
             @endforeach

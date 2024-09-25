@@ -43,7 +43,10 @@ class PagamentoLocacaoController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
+    {   
+        $date = DateTime::createFromFormat('m/d/Y', $request->data_pagamento);
+        $dateConvertida =  $date->format('Y-m-d');
+        $request['data_pagamento'] = $dateConvertida;
         $request->validate([
             'data_pagamento' => 'required|date',
             'valor_pago' => 'required|numeric',

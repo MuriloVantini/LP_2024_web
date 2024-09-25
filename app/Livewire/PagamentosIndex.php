@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\PagamentoLocacao;
+use Filament\Notifications\Notification;
 use Livewire\Component;
 
 class PagamentosIndex extends Component
@@ -22,7 +23,8 @@ class PagamentosIndex extends Component
         if ($pagamento) {
             $pagamento->delete();
             $this->pagamentos = PagamentoLocacao::with('locacao')->get();
-            session()->flash('message', 'Pagamento excluído com sucesso.');
+            Notification::make()->title('Pagamento excluído com sucesso')->success()->send();
+            return redirect()->route('pagamentos.index');
         }
     }
 

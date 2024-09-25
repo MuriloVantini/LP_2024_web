@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\DevolucaoVeiculo;
+use Filament\Notifications\Notification;
 use Livewire\Component;
 
 class DevolucoesIndex extends Component
@@ -21,7 +22,8 @@ class DevolucoesIndex extends Component
         if ($devolucao) {
             $devolucao->delete();
             $this->devolucoes = DevolucaoVeiculo::with('locacao')->get();
-            session()->flash('message', 'Devolucao excluída com sucesso.');
+            Notification::make()->title('Devolução excluída com sucesso')->success()->send();
+            return redirect()->route('devolucoes.index');
         }
     }
 

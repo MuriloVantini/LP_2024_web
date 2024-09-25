@@ -24,7 +24,6 @@ class VeiculosIndex extends Component
             $this->reset('veiculos');
             $this->veiculos = Veiculo::all();
             Notification::make()->title('Veículo excluído com sucesso')->success()->send();
-            return redirect()->route('veiculos.index');
         }
     }
 

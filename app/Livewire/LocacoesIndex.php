@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Locacao;
+use Filament\Notifications\Notification;
 use Livewire\Component;
 
 class LocacoesIndex extends Component
@@ -22,7 +23,8 @@ class LocacoesIndex extends Component
         if ($locacao) {
             $locacao->delete();
             $this->locacoes = Locacao::with(['veiculo', 'user'])->get();
-            session()->flash('message', 'Locacao excluída com sucesso.');
+            Notification::make()->title('Locação excluída com sucesso')->success()->send();
+            return redirect()->route('locacoes.index');
         }
     }
 

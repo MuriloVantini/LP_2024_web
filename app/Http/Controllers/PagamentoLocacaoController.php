@@ -22,9 +22,6 @@ class PagamentoLocacaoController extends Controller
 
     public function store(Request $request)
     {
-        $date = DateTime::createFromFormat('m/d/Y', $request->data_pagamento);
-        $dateConvertida =  $date->format('Y-m-d');
-        $request['data_pagamento'] = $dateConvertida;
         $request->validate([
             'locacao_id' => 'required|exists:locacoes,id',
             'data_pagamento' => 'required|date',

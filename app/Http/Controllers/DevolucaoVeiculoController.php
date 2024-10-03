@@ -22,9 +22,6 @@ class DevolucaoVeiculoController extends Controller
 
     public function store(Request $request)
     {   
-        $date = DateTime::createFromFormat('m/d/Y', $request->data_devolucao);
-        $dateConvertida =  $date->format('Y-m-d');
-        $request['data_devolucao'] = $dateConvertida;
         $request->validate([
             'locacao_id' => 'required|exists:locacoes,id',
             'data_devolucao' => 'required|date',

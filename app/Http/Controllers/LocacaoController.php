@@ -24,12 +24,6 @@ class LocacaoController extends Controller
 
     public function store(Request $request)
     {
-        $dateInicio = DateTime::createFromFormat('m/d/Y', $request->data_inicio);
-        $dateInicioConvertida =  $dateInicio->format('Y-m-d');
-        $dateFim = DateTime::createFromFormat('m/d/Y', $request->data_fim);
-        $dateFimConvertida =  $dateFim->format('Y-m-d');
-        $request['data_inicio'] = $dateInicioConvertida;
-        $request['data_fim'] = $dateFimConvertida;
         $request->validate(rules: [
             'user_id' => 'required|exists:users,id',
             'veiculo_id' => 'required|exists:veiculos,id',

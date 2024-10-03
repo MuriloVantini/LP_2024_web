@@ -1,376 +1,210 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Menu') }}
-        </h2>
-    </x-slot>
-    @section('content')
-        <!DOCTYPE html>
-        <html>
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-            <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Ysabeau&display=swap" rel="stylesheet">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
-            <title>RentalHub</title>
-        </head>
-
-        <body>
-
-
-            <nav class="navbar navbar-expand-md fixed-top navbar-dark">
-                <div class="container-fluid">
-                    <a href="index.html"><span id="site-logo" class="text-light">RentalHub</span></a>
-                    <button class="navbar-toggler text-light" data-target="#navbar01" data-toggle="collapse" type="button">
-                        <i id="toggle-icon" class="bi-list"></i> </button>
-                    <div class="collapse navbar-collapse" id="navbar01">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a class="nav-link" href="#">Tours</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        </ul>
-                        <ul class="ml-auto nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="bi-search"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <section class="jumbotron mb-0 text-light text-center"
-                style="padding-top:111px;position:relative;margin-top:0px;">
-                <h2 id="hero-heading">TRAVEL MADE EASY</h2>
-                <p id="hero-desc" class="lead small">Renting made easy with RentalHub, your one-stop destination for all
-                    your rental needs. Whether you're looking for a sleek</p>
-                <p><a class="btn btn-sm btn-outline-light" style="padding: 4.5px 14.5px !important;border-radius: 4px;"
-                        href="#" role="button">Learn More</a> </p>
-            </section>
-            <div class="container-fluid pl-4 pr-4 pt-5 pb-4 text-center text-light">
-                <div class="container-fluid my-3 text-center text-light">
-                    <h2 style="color:#ECECEC;">Heading</h2>
-                    <hr>
-                    <p> Whether you're looking for a sleek city apartment or a cozy countryside cottage, we've got</p>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4 my-2">
-                            <h1 style="color:#00939A"><i class="bi-water"></i></h1>
-                            <h2 class="my-2">Heading</h2>
-                            <p> With</p>
-                        </div>
-                        <div class="col-md-4 my-2">
-                            <h1 style="color:#00939A"><i class="bi-globe"></i></h1>
-                            <h2 class="my-2">Heading</h2>
-                            <p> With</p>
-                        </div>
-                        <div class="col-md-4 my-2">
-                            <h1 style="color:#00939A"><i class="bi-suitcase2"></i></h1>
-                            <h2 class="my-2">Heading</h2>
-                            <p> With</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid pl-4 pr-4 py-4 text-left text-light">
-                <div class="container-fluid my-3 text-center text-light">
-                    <h2 style="color:#ECECEC;">Heading</h2>
-                    <hr>
-                    <p> Whether you're looking for a sleek city apartment or a cozy countryside cottage, we've got</p>
-                </div>
-                <div class="container-fluid">
-                    <div class="glide">
-                        <div data-glide-el="track" class="glide__track">
-                            <ul class="glide__slides">
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div class="p-2">
-                                        <div class="carousel-img">
-                                            <img alt="" style="width: 99%;"
-                                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                                        </div>
-                                        <div class="py-2">
-                                            <h5 style="color:#ECECEC;">Heading</h5>
-                                            <p class="small text-light"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="btn btn-outline-secondary glide__arrow glide__arrow--prev"
-                                    data-glide-dir="<">‹</button>
-                                <button class="btn btn-outline-secondary glide__arrow glide__arrow--next"
-                                    data-glide-dir=">">›</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid pl-4 pr-4 py-4 text-left text-light">
-                <div class="container-fluid my-3 text-center text-light">
-                    <h2 style="color:#ECECEC;">Heading</h2>
-                    <hr>
-                    <p> Whether you're looking for a sleek city apartment or a cozy countryside cottage, we've got</p>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-3 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid pl-4 pr-4 py-4 text-left text-light">
-                <div class="container-fluid my-3 text-center text-light">
-                    <h2 style="color:#ECECEC;">Heading</h2>
-                    <hr>
-                    <p> Whether you're looking for a sleek city apartment or a cozy countryside cottage, we've got</p>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                        <div class="col-md-6 my-2 gallery-col">
-                            <img alt=""
-                                src="https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
-                            <h5 class="mt-1 text-light">Heading</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="contact" class="container-fluid pl-4 pr-4 py-5">
-                <div class="container-fluid bg-transparent text-left text-light"
-                    style="position:relative;margin-top:0px;">
-                    <div class="container-fluid my-3 text-center text-light" style="padding-left:0;">
-                        <h2 style="color:#FEFEFE;">Contact Us</h2>
-                        <hr>
-                    </div>
-                    <form id="contact-form" action="#" method="post">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name"
-                                required="">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Email" required="">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="subject" name="subject"
-                                placeholder="Subject" required="">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Message" required=""></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-filled">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <footer class="py-5">
-                <div class="container-fluid px-4">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="input-group w-100">
-                                <input type="email" class="form-control mb-2 rounded-0" style="min-width:120px;"
-                                    placeholder="Email">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-filled mb-2 rounded-0">Subscribe</button>
-                                </div>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li class="d-inline-block pr-1"><a href="#" class="bi-facebook text-dark"></a></li>
-                                <li class="d-inline-block pr-1"><a href="#" class="bi-twitter-x text-dark"></a>
-                                </li>
-                                <li class="d-inline-block pr-1"><a href="#" class="bi-instagram text-dark"></a>
-                                </li>
-                                <li class="d-inline-block pr-1"><a href="#" class="bi-linkedin text-dark"></a></li>
-                                <li class="d-inline-block pr-1"><a href="#" class="bi-youtube text-dark"></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="text-dark">Site Map</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="about.html" class="text-dark">About</a></li>
-                                <li><a href="tours.html" class="text-dark">Tours</a></li>
-                                <li><a href="destinations.html" class="text-dark">Destinations</a></li>
-                                <li><a href="testimonials.html" class="text-dark">Testimonials</a></li>
-                                <li><a href="contact.html" class="text-dark">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="text-dark">Site Map</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="about.html" class="text-dark">About</a></li>
-                                <li><a href="tours.html" class="text-dark">Tours</a></li>
-                                <li><a href="destinations.html" class="text-dark">Destinations</a></li>
-                                <li><a href="testimonials.html" class="text-dark">Testimonials</a></li>
-                                <li><a href="contact.html" class="text-dark">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="text-dark">Site Map</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="about.html" class="text-dark">About</a></li>
-                                <li><a href="tours.html" class="text-dark">Tours</a></li>
-                                <li><a href="destinations.html" class="text-dark">Destinations</a></li>
-                                <li><a href="testimonials.html" class="text-dark">Testimonials</a></li>
-                                <li><a href="contact.html" class="text-dark">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="text-dark mb-0">RentalHub © 2024. All Rights Reserved. <a
-                                    href="https://www.pexels.com" style="text-decoration: underline;"
-                                    class="text-dark">Photos provided by Pexels</a></p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-        </body>
-
-        </html>
-    @endsection
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
+        <div class="flex flex-row justify-between items-center">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Menu') }}
+            </h2>
+            <div class="text-center leading-tight">
+                <button
+                    class="text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    type="button" data-drawer-target="drawer-contact" data-drawer-show="drawer-contact"
+                    aria-controls="drawer-contact">
+                    Entre em contato!
+                </button>
             </div>
         </div>
-    </div>
+    </x-slot>
+    @section('content')
+        <div class="flex lg:flex-row sm:flex-col-reverse sm:items-center justify-evenly mt-10 ">
+            <div class="flex flex-wrap my-4 gap-2 ml-10">
+                <a href="#"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frota</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Confira nossa variedade de
+                        carros, desde compactos até SUVs e veículos de luxo.</p>
+                </a>
+                <a href="#"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ofertas</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Veja nossas promoções e
+                        tarifas especiais para aluguel de curto e longo prazo.</p>
+                </a>
+                <a href="#"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Locação</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Saiba mais sobre como alugar
+                        um carro e os requisitos necessários.</p>
+                </a>
+                <a href="#"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Serviços</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Explore os serviços
+                        adicionais que oferecemos, como seguro, GPS, e suporte 24 horas.</p>
+                </a>
+            </div>
+            <img src="{{ asset('images/home_image.webp') }}" alt="Descrição da imagem"
+                class="h-1/2 max-w-lg duration-300 rounded-lg">
+        </div>
+        <div class="px-10 my-10">
+            <hr>
+        </div>
+        <div class="mb-52 lg:mx-20">
+            <div class="mb-4">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Encontre o Carro Perfeito
+                    para Sua Jornada</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Explore nossa frota diversificada e escolha o
+                    veículo ideal para cada ocasião, desde viagens curtas a grandes aventuras.</p>
+            </div>
+            <div id="drawer-contact"
+                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800"
+                tabindex="-1" aria-labelledby="drawer-contact-label">
+                <h5 id="drawer-label"
+                    class="inline-flex items-center mb-6 text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
+                    <svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 20 16">
+                        <path
+                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                        <path
+                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                    </svg>Contact us
+                </h5>
+                <button type="button" data-drawer-hide="drawer-contact" aria-controls="drawer-contact"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close menu</span>
+                </button>
+                <form class="mb-6">
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Seu
+                            e-mail</label>
+                        <input type="email" id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="email@gmail.com" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Título</label>
+                        <input type="text" id="subject"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Dê um título para sua mensagem" required />
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sua
+                            mensagem</label>
+                        <textarea id="message" rows="4"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Escreva sua mensagem da maneira que desejar!"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block">Enviar</button>
+                </form>
+                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                    <a href="https://github.com/MuriloVantini/LP_2024_web" class="hover:underline">Visualize o projeto</a>
+                </p>
+            </div>
+
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://images.unsplash.com/photo-1469285994282-454ceb49e63c?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://images.unsplash.com/photo-1484136540910-d66bb475348d?q=80&w=1253&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                    </div>
+                </div>
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                        data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                        data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                        data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                        data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                        data-carousel-slide-to="4"></button>
+                </div>
+                <button type="button"
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <p class="mt-4 font-normal text-gray-700 dark:text-gray-400">Oferecemos uma ampla seleção de veículos para
+                atender a todas as suas necessidades. Desde compactos econômicos ideais para o trânsito urbano até SUVs
+                espaçosos perfeitos para viagens em família, temos o carro certo para qualquer ocasião. Nosso compromisso é
+                proporcionar conforto, segurança e praticidade, com veículos modernos e revisados regularmente para garantir
+                sua tranquilidade na estrada. Além disso, oferecemos tarifas competitivas e pacotes especiais de locação de
+                curto e longo prazo. Não importa o destino, estamos aqui para facilitar sua jornada. Escolha seu próximo
+                carro e aproveite o melhor da estrada com a gente!</p>
+            <p class="mt-4 font-normal text-gray-700 dark:text-gray-400">Além da variedade de veículos, você também conta
+                com um atendimento personalizado e serviços adicionais, como GPS, cadeirinhas para crianças, seguro completo
+                e assistência 24 horas. Nossa missão é garantir que sua experiência de locação seja a mais prática e
+                conveniente possível. Seja para uma viagem de negócios, lazer ou uma ocasião especial, estamos prontos para
+                oferecer soluções sob medida que atendam suas expectativas. Confie na nossa equipe para tornar sua locação
+                fácil, rápida e sem complicações!</p>
+        </div>
+    @endsection
+    @section('footer')
+        <footer class="bg-white rounded-lg shadow  dark:bg-gray-800">
+            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 - <a href="#"
+                        class="hover:underline">Os Murilos do BCC</a>. Todos os direitos reservados.
+                </span>
+                <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Política de Privacidade</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licenças</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    @endsection
 </x-app-layout>

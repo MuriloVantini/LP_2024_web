@@ -54,6 +54,7 @@
     <!-- Livewire Scripts -->
     @livewire('notifications')
     @filamentScripts
+    @yield('footer')
 </body>
 
 </html>

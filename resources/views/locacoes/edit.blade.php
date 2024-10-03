@@ -33,7 +33,7 @@
                 </select>
             </div>
             <label for="date-range-picker" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Data</label>
-            <div id="date-range-picker" date-rangepicker class="flex items-center mb-5">
+            <div id="date-range-picker" date-rangepicker datepicker-format="yyyy-mm-dd" class="flex items-center mb-5">
                 <div class="relative">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"

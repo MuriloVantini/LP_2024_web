@@ -20,6 +20,7 @@
                     </svg>
                 </div>
                 <input name="data_pagamento" id="datepicker-autohide" datepicker datepicker-autohide
+                datepicker-format="yyyy-mm-dd"
                     value="{{ old('data_pagamento', $pagamento->data_pagamento) }}" type="text"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Selecione uma data">
@@ -52,13 +53,3 @@
         </form>
     @endsection
 </x-app-layout>
-
-{{-- 
-@error('data_pagamento')
-    <div class="text-red-500 text-sm">{{ $message }}</div>
-@enderror --}}
-
-{{-- 
-@error('metodo_pagamento')
-    <div class="text-red-500 text-sm">{{ $message }}</div> 
-@enderror --}}

@@ -23,7 +23,6 @@ class DevolucoesIndex extends Component
             $devolucao->delete();
             $this->devolucoes = DevolucaoVeiculo::with('locacao')->get();
             Notification::make()->title('Devolução excluída com sucesso')->success()->send();
-            return redirect()->route('devolucoes.index');
         }
     }
 

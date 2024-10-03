@@ -24,7 +24,6 @@ class LocacoesIndex extends Component
             $locacao->delete();
             $this->locacoes = Locacao::with(['veiculo', 'user'])->get();
             Notification::make()->title('Locação excluída com sucesso')->success()->send();
-            return redirect()->route('locacoes.index');
         }
     }
 

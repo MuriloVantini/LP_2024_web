@@ -24,7 +24,6 @@ class PagamentosIndex extends Component
             $pagamento->delete();
             $this->pagamentos = PagamentoLocacao::with('locacao')->get();
             Notification::make()->title('Pagamento excluído com sucesso')->success()->send();
-            return redirect()->route('pagamentos.index');
         }
     }
 

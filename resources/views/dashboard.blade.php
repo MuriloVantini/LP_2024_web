@@ -15,7 +15,7 @@
         </div>
     </x-slot>
     @section('content')
-        <div class="flex lg:flex-row sm:flex-col-reverse sm:items-center justify-evenly mt-10 ">
+        <div class="flex lg:flex-row md:flex-col-reverse md:justify-center sm:flex-col-reverse sm:items-center sm:justify-evenly mt-10 ">
             <div class="flex flex-wrap my-4 gap-2 ml-10">
                 <a href="#"
                     class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">

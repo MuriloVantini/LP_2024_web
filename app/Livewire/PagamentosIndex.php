@@ -23,6 +23,7 @@ class PagamentosIndex extends Component
 
         if ($pagamento) {
             $pagamento->delete();
+            $this->reset('pagamentos');
             $this->pagamentos = PagamentoLocacao::with('locacao')->get();
             Notification::make()->title('Pagamento excluído com sucesso')->success()->send();
         }

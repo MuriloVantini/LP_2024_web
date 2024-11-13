@@ -23,6 +23,7 @@ class LocacoesIndex extends Component
 
         if ($locacao) {
             $locacao->delete();
+            $this->reset('locacoes');
             $this->locacoes = Locacao::with(['veiculo', 'user'])->get();
             Notification::make()->title('Locação excluída com sucesso')->success()->send();
         }

@@ -53,9 +53,11 @@
                                 href="{{ route('devolucoes.show', $devolucao->id) }}">Visualizar</a>
                             <a class="hover:underline hover:text-white"
                                 href="{{ route('devolucoes.edit', $devolucao->id) }}">Editar</a>
+                            @if(auth()->check())
                             <button wire:click="deleteDevolucao({{ $devolucao->id }})"
                                 class="hover:underline hover:text-red-600">Excluir</button>
-                        </td>
+                            @endif
+                            </td>
                     </tr>
                 @endforeach
             </tbody>

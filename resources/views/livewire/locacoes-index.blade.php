@@ -59,8 +59,10 @@
                                 href="{{ route('locacoes.show', $locacao->id) }}">Visualizar</a>
                             <a class="hover:underline hover:text-white"
                                 href="{{ route('locacoes.edit', $locacao->id) }}">Editar</a>
-                            <button wire:click="deleteLocacao({{ $locacao->id }})"
-                                class="hover:underline hover:text-red-600">Excluir</button>
+                            @if (auth()->check())
+                                <button wire:click="deleteLocacao({{ $locacao->id }})"
+                                    class="hover:underline hover:text-red-600">Excluir</button>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

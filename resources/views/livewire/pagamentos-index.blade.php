@@ -53,8 +53,10 @@
                                 href="{{ route('pagamentos.show', $pagamento->id) }}">Visualizar</a>
                             <a class="hover:underline hover:text-white"
                                 href="{{ route('pagamentos.edit', $pagamento->id) }}">Editar</a>
-                            <button wire:click="deletePagamento({{ $pagamento->id }})"
-                                class="hover:underline hover:text-red-600">Excluir</button>
+                            @if (auth()->check())
+                                <button wire:click="deletePagamento({{ $pagamento->id }})"
+                                    class="hover:underline hover:text-red-600">Excluir</button>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

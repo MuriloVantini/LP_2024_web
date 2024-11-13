@@ -34,8 +34,10 @@
                                 href="{{ route('veiculos.show', $veiculo->id) }}">Visualizar</a>
                             <a class="hover:underline hover:text-white"
                                 href="{{ route('veiculos.edit', $veiculo->id) }}">Editar</a>
-                            <button wire:click="deleteVeiculo({{ $veiculo->id }})"
-                                class="hover:underline hover:text-red-600">Excluir</button>
+                            @if (auth()->check())
+                                <button wire:click="deleteVeiculo({{ $veiculo->id }})"
+                                    class="hover:underline hover:text-red-600">Excluir</button>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

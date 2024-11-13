@@ -5,19 +5,19 @@
             placeholder="Pesquisar por modelo ou marca" />
     </div>
     @if (count($veiculos) > 0)
-    <table class="w-full rounded-lg  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">ID</th>
-                <th scope="col" class="px-6 py-3">Modelo</th>
-                <th scope="col" class="px-6 py-3">Marca</th>
-                <th scope="col" class="px-6 py-3">Preço Diário</th>
-                <th scope="col" class="px-6 py-3">Disponibilidade</th>
-                <th scope="col" class="px-6 py-3">Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            
+        <table class="w-full rounded-lg  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">Modelo</th>
+                    <th scope="col" class="px-6 py-3">Marca</th>
+                    <th scope="col" class="px-6 py-3">Preço Diário</th>
+                    <th scope="col" class="px-6 py-3">Disponibilidade</th>
+                    <th scope="col" class="px-6 py-3">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
                 @foreach ($veiculos as $veiculo)
                     <tr wire:key="veiculo-{{ $veiculo->id }}"
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-50">
@@ -39,10 +39,12 @@
                         </td>
                     </tr>
                 @endforeach
-            @else
-                <x-empty-list/>
-            @endif
-        </tbody>
 
-    </table>
+
+            </tbody>
+
+        </table>
+    @else
+        <x-empty-list />
+    @endif
 </div>

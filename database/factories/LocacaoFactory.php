@@ -23,7 +23,7 @@ class LocacaoFactory extends Factory
             'veiculo_id'=>Veiculo::factory(),
             'data_inicio'=> $dataInicio = fake()->date(),
             'data_fim'=> fake()->dateTimeBetween($dataInicio, '+1 week'),
-            'valor_total'=> $valorTotal = fake()->randomFloat(2, 75, 1000),
+            // 'valor_total'=> $valorTotal = fake()->randomFloat(2, 75, 1000),
         ];
     }
 }

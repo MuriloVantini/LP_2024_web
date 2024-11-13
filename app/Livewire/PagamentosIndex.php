@@ -10,6 +10,7 @@ class PagamentosIndex extends Component
 {
 
     public $pagamentos;
+    public $pesquisa = '';
 
     public function mount()
     {
@@ -29,6 +30,8 @@ class PagamentosIndex extends Component
 
     public function render()
     {
+        $this->pagamentos = PagamentoLocacao::where('data_pagamento', 'like', '%' . $this->pesquisa . '%')
+        ->get();
         return view('livewire.pagamentos-index');
     }
 }

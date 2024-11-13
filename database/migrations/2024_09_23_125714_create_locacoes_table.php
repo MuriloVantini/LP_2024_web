@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('veiculo_id')->constrained('veiculos')->onDelete('cascade');  // Referenciar 'id'
             $table->date('data_inicio');
             $table->date('data_fim');
-            $table->decimal('valor_total', 10, 2);
+            $table->decimal('valor_total', 10, 2)->nullable();
             $table->timestamps();
         });
     }

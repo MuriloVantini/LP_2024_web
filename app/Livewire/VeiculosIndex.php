@@ -9,6 +9,8 @@ use Filament\Notifications\Notification;
 class VeiculosIndex extends Component
 {
     public $veiculos;
+    public $pesquisa = '';
+
     protected $listerners = ['dataDeleted', 'dataSaved'];
     public function mount()
     {
@@ -29,6 +31,9 @@ class VeiculosIndex extends Component
 
     public function render()
     {
+        $this->veiculos = Veiculo::where('modelo', 'like', '%' . $this->pesquisa . '%')
+        ->orWhere('marca', 'like', '%' . $this->pesquisa . '%')
+        ->get();
         return view('livewire.veiculos-index');
     }
 }

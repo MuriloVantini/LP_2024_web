@@ -10,6 +10,7 @@ class LocacoesIndex extends Component
 {
 
     public $locacoes;
+    public $pesquisa = '';
 
     public function mount()
     {
@@ -29,6 +30,16 @@ class LocacoesIndex extends Component
 
     public function render()
     {
+        $this->locacoes = Locacao::whereHas('veiculo', function ($query) {
+            $query->where('modelo', 'like', '%' . $this->pesquisa . '%')
+                  ->orWhere('marca', 'like', '%' . $this->pesquisa . '%');
+        })
+        ->orWhereHas('user', function ($query) {
+            $query->where('name', 'like', '%' . $this->pesquisa . '%');
+        })
+        ->with(['veiculo', 'user'])
+        ->get();
+    
         return view('livewire.locacoes-index');
     }
 }

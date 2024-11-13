@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         // Veiculo::factory(10)->create();
-        // Locacao::factory(10)->create();
+        Locacao::factory(10)->create();
         // DevolucaoVeiculo::factory(10)->create();
         // PagamentoLocacao::factory(10)->create();
     }

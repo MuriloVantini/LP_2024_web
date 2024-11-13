@@ -9,6 +9,7 @@ use Livewire\Component;
 class DevolucoesIndex extends Component
 {
     public $devolucoes;
+    public $pesquisa = '';
 
     public function mount()
     {
@@ -29,6 +30,8 @@ class DevolucoesIndex extends Component
 
     public function render()
     {
+        $this->devolucoes = DevolucaoVeiculo::where('data_devolucao', 'like', '%' . $this->pesquisa . '%')
+        ->get();
         return view('livewire.devolucoes-index');
     }
 }

@@ -29,10 +29,25 @@ class LocacaoController extends Controller
             'veiculo_id' => 'required|exists:veiculos,id',
             'data_inicio' => 'required|date',
             'data_fim' => 'required|date|after:data_inicio',
-            'valor_total' => 'required|numeric',
         ]);
 
-        Locacao::create($request->all());
+        // Obter veiculo para obter o preço da diária
+        $veiculo = Veiculo::findOrFail($request->veiculo_id);
+
+        //quantidade de dias * preço diaria
+        $dataInicio = new DateTime($request->data_inicio);
+        $dataFim = new DateTime($request->data_fim);
+        $dias = $dataInicio->diff($dataFim)->days;
+        $valorTotal = $dias * $veiculo->preco_diaria;
+
+        Locacao::create([
+            'user_id' => $request->user_id,
+            'veiculo_id' => $request->veiculo_id,
+            'data_inicio' => $request->data_inicio,
+            'data_fim' => $request->data_fim,
+            'valor_total' => $valorTotal,
+        ]);
+
         return redirect()->route('locacoes.index')->with('success', 'Locação criada com sucesso!');
     }
 
@@ -57,11 +72,25 @@ class LocacaoController extends Controller
             'veiculo_id' => 'required|exists:veiculos,id',
             'data_inicio' => 'required|date',
             'data_fim' => 'required|date|after:data_inicio',
-            'valor_total' => 'required|numeric',
         ]);
 
         $locacao = Locacao::findOrFail($id);
-        $locacao->update($request->all());
+
+        // Obter veiculo para obter o preço da diária
+        $veiculo = Veiculo::findOrFail($request->veiculo_id);
+
+        $dataInicio = new DateTime($request->data_inicio);
+        $dataFim = new DateTime($request->data_fim);
+        $dias = $dataInicio->diff($dataFim)->days;
+        $valorTotal = $dias * $veiculo->preco_diaria;
+
+        $locacao->update([
+            'user_id' => $request->user_id,
+            'veiculo_id' => $request->veiculo_id,
+            'data_inicio' => $request->data_inicio,
+            'data_fim' => $request->data_fim,
+            'valor_total' => $valorTotal,
+        ]);
 
         return redirect()->route('locacoes.index')->with('success', 'Locação atualizada com sucesso!');
     }

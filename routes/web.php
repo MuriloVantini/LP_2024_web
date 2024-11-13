@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeiculoController;
@@ -26,5 +27,7 @@ Route::resource('veiculos', VeiculoController::class);
 Route::resource('locacoes', LocacaoController::class);
 Route::resource('pagamentos', PagamentoLocacaoController::class);
 Route::resource('devolucoes', DevolucaoVeiculoController::class);
+
+Route::get('clientes', [ClienteController::class, 'index'])->name('clientes.index');;
 
 require __DIR__ . '/auth.php';

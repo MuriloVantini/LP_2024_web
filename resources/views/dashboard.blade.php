@@ -15,8 +15,7 @@
         </div>
     </x-slot>
     @section('content')
-        <div class="flex lg:flex-row md:flex-col-reverse md:justify-center sm:flex-col-reverse sm:items-center sm:justify-evenly mt-10 ">
-            <div class="flex flex-wrap my-4 gap-2 ml-10">
+            <div class="flex flex-wrap justify-center wrap my-4 gap-2 gap-y-3 px-10 mt-10">
                 <a href="#"
                     class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frota</h5>
@@ -42,9 +41,6 @@
                         adicionais que oferecemos, como seguro, GPS, e suporte 24 horas.</p>
                 </a>
             </div>
-            <img src="{{ asset('images/home_image.webp') }}" alt="Descrição da imagem"
-                class="h-1/2 max-w-lg duration-300 rounded-lg">
-        </div>
         <div class="px-10 my-10">
             <hr>
         </div>
@@ -66,7 +62,7 @@
                             d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                         <path
                             d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                    </svg>Contact us
+                    </svg>Contate-nos
                 </h5>
                 <button type="button" data-drawer-hide="drawer-contact" aria-controls="drawer-contact"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
@@ -75,7 +71,7 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                     </svg>
-                    <span class="sr-only">Close menu</span>
+                    <span class="sr-only">Fechar</span>
                 </button>
                 <form class="mb-6">
                     <div class="mb-6">

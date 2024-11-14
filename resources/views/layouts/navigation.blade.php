@@ -100,6 +100,9 @@
             <x-responsive-nav-link :href="route('devolucoes.index')" :active="request()->routeIs('devolucoes.index')">
                 {{ __('Devoluções') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
+                {{ __('Clientes') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

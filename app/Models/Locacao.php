@@ -16,6 +16,7 @@ class Locacao extends Model
         'veiculo_id',
         'data_inicio',
         'data_fim',
+        'valor_total'
     ];
 
     // Relacionamento com Veiculo

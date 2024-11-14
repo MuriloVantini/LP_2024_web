@@ -17,10 +17,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('veiculos', VeiculoController::class)->only(['index', 'show']);
-Route::resource('locacoes', LocacaoController::class)->only(['index', 'show']);
-Route::resource('pagamentos', PagamentoLocacaoController::class)->only(['index', 'show']);
-Route::resource('devolucoes', DevolucaoVeiculoController::class)->only(['index', 'show']);
+Route::resource('veiculos', VeiculoController::class)->only(['index', 'show', 'create']);
+Route::resource('locacoes', LocacaoController::class)->only(['index', 'show', 'create']);
+Route::resource('pagamentos', PagamentoLocacaoController::class)->only(['index', 'show', 'create']);
+Route::resource('devolucoes', DevolucaoVeiculoController::class)->only(['index', 'show', 'create']);
 
 // Rotas protegidas por autenticação (edit, create, update, destroy)
 Route::middleware('auth')->group(function () {
